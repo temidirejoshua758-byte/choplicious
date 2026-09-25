@@ -1,0 +1,30 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Packages — Choplicious</title><link rel="stylesheet" href="styles.css"></head><body>
+<div class="topbar"><div class="container"><span>🔥 Bold Taste. Real Good.</span><span>Fresh small chops • Burgers • Shawarma • Zobo</span></div></div>
+<header class="navbar"><div class="container nav-inner">
+<a class="brand" href="index.html"><img src="assets/logo.png" alt="Choplicious logo"><span>Choplicious</span></a>
+<button class="menu-btn" id="mobileMenu" aria-label="Open menu">☰</button>
+<nav class="nav-links" id="navLinks">
+<a href="index.html">Home</a><a href="menu.html">Small Chops</a><a href="packages.html">Packages</a><a href="fast-food.html">Fast Food</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+</nav>
+<a class="btn btn-primary nav-cta" href="contact.html">Order Now</a>
+</div></header>
+
+<main><section class="page-hero"><div class="container"><span class="kicker">📦 Choplicious Packages</span><h1>More variety. One box.</h1><p>Choose a package when you want a balanced selection without building your order item by item.</p></div></section>
+<section class="section"><div class="container"><div class="package-grid"><article class="package"><span class="pill" style="background:rgba(255,255,255,.14);color:#fff">CHOPLICIOUS</span><h3 style="margin-top:16px">Solo Box</h3><div class="package-price">₦2,500</div><ul><li>A compact personal mix</li><li>Great for one person</li><li>Assorted small chops</li><li>Sauce included</li></ul><button class="btn btn-light" onclick="addToCart('Solo Box',2500)">Add Solo Box</button></article>
+<article class="package"><span class="pill" style="background:rgba(255,255,255,.14);color:#fff">POPULAR</span><h3 style="margin-top:16px">Classic Box</h3><div class="package-price">₦6,000</div><ul><li>A fuller assorted mix</li><li>Good for 2–3 people</li><li>Mix of fried favourites</li><li>Sauce included</li></ul><button class="btn btn-light" onclick="addToCart('Classic Box',6000)">Add Classic Box</button></article>
+<article class="package"><span class="pill" style="background:rgba(255,255,255,.14);color:#fff">CHOPLICIOUS</span><h3 style="margin-top:16px">Premium Box</h3><div class="package-price">₦10,500</div><ul><li>Premium mixed selection</li><li>Good for 4–5 people</li><li>Small chops + grilled bites</li><li>Multiple sauces</li></ul><button class="btn btn-light" onclick="addToCart('Premium Box',10500)">Add Premium Box</button></article>
+<article class="package"><span class="pill" style="background:rgba(255,255,255,.14);color:#fff">CHOPLICIOUS</span><h3 style="margin-top:16px">Party Pack</h3><div class="package-price">₦22,500</div><ul><li>Event-friendly assortment</li><li>Designed for sharing</li><li>Samosa + spring rolls + puff-puff</li><li>Akara + wings + gizzard + suya + sauces</li></ul><button class="btn btn-light" onclick="addToCart('Party Pack',22500)">Add Party Pack</button></article></div>
+<div style="margin-top:34px" class="about-grid"><div class="about-copy"><span class="pill">For events & gatherings</span><h2>Make the food table the place everyone visits.</h2><p>For larger orders, contact Choplicious directly so quantities, sauce options, delivery and event timing can be confirmed before payment.</p><a class="btn btn-primary" href="contact.html">Plan a Party Order</a></div><div class="about-image"><img src="assets/party-pack.png" alt="Choplicious party pack"></div></div></div></section></main>
+<footer class="footer"><div class="container">
+<div class="footer-grid">
+<div><div class="brand"><img src="assets/logo.png" alt="Choplicious logo"><span>Choplicious</span></div><p style="margin-top:14px">Small chops, burgers, shawarma and refreshing zobo made to turn ordinary moments into tasty memories.</p></div>
+<div><h3>Explore</h3><div class="footer-links"><a href="menu.html">Small Chops</a><a href="packages.html">Packages</a><a href="fast-food.html">Fast Food</a></div></div>
+<div><h3>Popular</h3><div class="footer-links"><a href="packages.html">Classic Box</a><a href="fast-food.html">Akara Burger</a><a href="fast-food.html">Chicken Burger</a></div></div>
+<div><h3>Order</h3><div class="footer-links"><a href="contact.html">WhatsApp Order</a><a href="contact.html">Pickup & Delivery</a><a href="about.html">Our Story</a></div></div>
+</div>
+<div class="footer-bottom"><span>© <span id="year"></span> Choplicious. All rights reserved.</span><span>Built for GitHub Pages • Static & free to host</span></div>
+</div></footer>
+<div class="toast" id="toast"></div>
+<div class="cart" id="cart"><div class="cart-head"><div><b>Your Order</b><div style="color:#777;font-size:.85rem">Ready for WhatsApp checkout</div></div><button class="close" onclick="closeCart()">×</button></div><div class="cart-items" id="cartItems"></div><div class="cart-foot"><div style="display:flex;justify-content:space-between;font-size:1.1rem;margin-bottom:14px"><b>Total</b><b id="cartTotal">₦0</b></div><button class="btn btn-primary" style="width:100%" onclick="checkout()">Order via WhatsApp</button></div></div>
+<script src="script.js"></script>
+</body></html>

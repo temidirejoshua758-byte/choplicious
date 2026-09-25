@@ -1,0 +1,27 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>About Choplicious</title><link rel="stylesheet" href="styles.css"></head><body>
+<div class="topbar"><div class="container"><span>🔥 Bold Taste. Real Good.</span><span>Fresh small chops • Burgers • Shawarma • Zobo</span></div></div>
+<header class="navbar"><div class="container nav-inner">
+<a class="brand" href="index.html"><img src="assets/logo.png" alt="Choplicious logo"><span>Choplicious</span></a>
+<button class="menu-btn" id="mobileMenu" aria-label="Open menu">☰</button>
+<nav class="nav-links" id="navLinks">
+<a href="index.html">Home</a><a href="menu.html">Small Chops</a><a href="packages.html">Packages</a><a href="fast-food.html">Fast Food</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+</nav>
+<a class="btn btn-primary nav-cta" href="contact.html">Order Now</a>
+</div></header>
+
+<main><section class="page-hero"><div class="container"><span class="kicker">❤️ About Choplicious</span><h1>Bold Taste. Real Good.</h1><p>A warm, modern small-chops brand built around food people recognise, crave and enjoy together.</p></div></section>
+<section class="section"><div class="container about-grid"><div class="about-image"><img src="assets/classic-box.png" alt="Choplicious classic box"></div><div class="about-copy"><span class="pill">The idea</span><h2>Small chops should feel exciting from the first look.</h2><p>Choplicious brings together Nigerian favourites and familiar fast-food comfort in one recognisable red, cream, charcoal and packaging-brown identity.</p><p>The website is intentionally simple: discover the menu, choose a package or fast-food item, add to an order and send it to WhatsApp for confirmation.</p><a class="btn btn-primary" href="menu.html">Explore the Menu</a></div></div></section>
+<section class="section alt"><div class="container"><div class="feature-strip"><div class="feature"><div class="icon">🌶️</div><h3>Bold flavour</h3><p>Descriptions and visuals are written to make the food easy to understand before ordering.</p></div><div class="feature"><div class="icon">📦</div><h3>Smart packaging</h3><p>The supplied Choplicious packaging photography gives the brand a strong, consistent presentation.</p></div><div class="feature"><div class="icon">🤝</div><h3>Made for sharing</h3><p>Boxes and party packs make it easy to serve groups, meetings and celebrations.</p></div></div></div></section></main>
+<footer class="footer"><div class="container">
+<div class="footer-grid">
+<div><div class="brand"><img src="assets/logo.png" alt="Choplicious logo"><span>Choplicious</span></div><p style="margin-top:14px">Small chops, burgers, shawarma and refreshing zobo made to turn ordinary moments into tasty memories.</p></div>
+<div><h3>Explore</h3><div class="footer-links"><a href="menu.html">Small Chops</a><a href="packages.html">Packages</a><a href="fast-food.html">Fast Food</a></div></div>
+<div><h3>Popular</h3><div class="footer-links"><a href="packages.html">Classic Box</a><a href="fast-food.html">Akara Burger</a><a href="fast-food.html">Chicken Burger</a></div></div>
+<div><h3>Order</h3><div class="footer-links"><a href="contact.html">WhatsApp Order</a><a href="contact.html">Pickup & Delivery</a><a href="about.html">Our Story</a></div></div>
+</div>
+<div class="footer-bottom"><span>© <span id="year"></span> Choplicious. All rights reserved.</span><span>Built for GitHub Pages • Static & free to host</span></div>
+</div></footer>
+<div class="toast" id="toast"></div>
+<div class="cart" id="cart"><div class="cart-head"><div><b>Your Order</b><div style="color:#777;font-size:.85rem">Ready for WhatsApp checkout</div></div><button class="close" onclick="closeCart()">×</button></div><div class="cart-items" id="cartItems"></div><div class="cart-foot"><div style="display:flex;justify-content:space-between;font-size:1.1rem;margin-bottom:14px"><b>Total</b><b id="cartTotal">₦0</b></div><button class="btn btn-primary" style="width:100%" onclick="checkout()">Order via WhatsApp</button></div></div>
+<script src="script.js"></script>
+</body></html>
