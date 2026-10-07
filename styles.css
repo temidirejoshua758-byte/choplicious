@@ -171,3 +171,14 @@ button,input,textarea{font:inherit}
   .footer-bottom{flex-direction:column;gap:8px}
   .cta{padding:30px;flex-direction:column;align-items:flex-start}
 }
+
+
+/* Small Chops menu image cards */
+.menu-img{width:100%;aspect-ratio:4/3;overflow:hidden;border-radius:16px;margin-bottom:16px;background:#f4eee8;border:1px solid rgba(90,54,31,.08)}
+.menu-img img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.menu-card:hover .menu-img img{transform:scale(1.035)}
+.image-credits{margin-top:24px;padding:16px 18px;background:#fff;border:1px solid rgba(90,54,31,.08);border-radius:16px;color:#6f665d;font-size:.85rem}
+.image-credits summary{cursor:pointer;font-weight:700;color:#4d3322}
+.image-credits ul{margin:12px 0 0;padding-left:20px}
+.image-credits li{margin:6px 0}
+.image-credits a{color:inherit;text-decoration:underline}
