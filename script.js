@@ -74,12 +74,33 @@ document.addEventListener("DOMContentLoaded", ()=>{
       document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x===btn));
     });
   });
-  document.querySelector("#mobileMenu")?.addEventListener("click",()=>{
-    document.querySelector("#navLinks")?.classList.toggle("open");
-  });
-  document.querySelectorAll("#navLinks a").forEach(a=>a.addEventListener("click",()=>{
-    document.querySelector("#navLinks")?.classList.remove("open");
-  }));
+
+  const mobileMenu = document.querySelector("#mobileMenu");
+  const navLinks = document.querySelector("#navLinks");
+
+  if (mobileMenu && navLinks) {
+    mobileMenu.setAttribute("aria-controls", "navLinks");
+    mobileMenu.setAttribute("aria-expanded", "false");
+
+    mobileMenu.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+
+      mobileMenu.setAttribute("aria-expanded", String(isOpen));
+      mobileMenu.setAttribute(
+        "aria-label",
+        isOpen ? "Close menu" : "Open menu"
+      );
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        mobileMenu.setAttribute("aria-expanded", "false");
+        mobileMenu.setAttribute("aria-label", "Open menu");
+      });
+    });
+  }
+
   document.querySelectorAll("[data-order-form]").forEach(form=>{
     form.addEventListener("submit", e=>{
       e.preventDefault();
