@@ -152,51 +152,129 @@ button,input,textarea{font:inherit}
   .hero-card img{height:420px}
   .footer-grid{grid-template-columns:2fr 1fr 1fr}
 }
-@media(max-width:720px){
-  .topbar .container{display:none}
-  .nav-inner{height:70px}
-  
-.nav-links {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 1001;
 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
+@media (max-width: 720px) {
+  .topbar .container {
+    display: none;
+  }
 
-  padding: 18px 5%;
-  background: var(--cream);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12);
+  /* Keep the brand name and menu button separate */
+  .nav-inner {
+    position: relative;
+    height: 70px;
+    gap: 10px;
+    justify-content: space-between;
+  }
 
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-8px);
+  .nav-inner > .brand {
+    flex: 1 1 auto;
+    min-width: 0;
+    gap: 7px;
+    overflow: visible;
+  }
 
-  transition:
-    opacity 0.2s ease,
-    transform 0.2s ease,
-    visibility 0.2s ease;
+  .nav-inner > .brand img {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+  }
+
+  .nav-inner > .brand span {
+    font-size: clamp(1rem, 4.5vw, 1.25rem);
+    white-space: nowrap;
+  }
+
+  /* Keep the three-line button on the right */
+  .menu-btn {
+    display: block;
+    flex: 0 0 auto;
+    margin-left: auto;
+    position: relative;
+    z-index: 1002;
+    padding: 9px 11px;
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+
+  /* Closed dropdown: hidden and unable to block taps */
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+
+    padding: 18px 5%;
+    background: var(--cream);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12);
+
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease,
+      visibility 0.2s ease;
+  }
+
+  /* Open dropdown: show clickable page links */
+  .nav-links.open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .cards,
+  .package-grid,
+  .menu-grid,
+  .feature-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 58px 0;
+  }
+
+  .hero {
+    padding: 42px 0 58px;
+  }
+
+  .hero-card img {
+    height: 330px;
+  }
+
+  .hero-badge {
+    left: 10px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .cta {
+    padding: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
-.nav-links.open {
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
-}
-
-.menu-btn {
-  display: block;
-  position: relative;
-  z-index: 1002;
-  cursor: pointer;
-  touch-action: manipulation;
-}
 
 
 /* Small Chops menu image cards */
