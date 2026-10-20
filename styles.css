@@ -155,21 +155,47 @@ button,input,textarea{font:inherit}
 @media(max-width:720px){
   .topbar .container{display:none}
   .nav-inner{height:70px}
-  .nav-links{
-    position:absolute;top:70px;left:0;right:0;background:var(--cream);padding:18px 5%;
-    flex-direction:column;align-items:flex-start;transform:translateY(-150%);transition:.25s;box-shadow:0 15px 25px rgba(0,0,0,.08)
-  }
-  .nav-links.open{transform:translateY(0)}
-  .menu-btn{display:block}
-  .nav-cta{display:none}
-  .cards,.package-grid,.menu-grid,.feature-strip{grid-template-columns:1fr}
-  .section{padding:58px 0}
-  .hero{padding:42px 0 58px}
-  .hero-card img{height:330px}
-  .hero-badge{left:10px}
-  .footer-grid{grid-template-columns:1fr 1fr}
-  .footer-bottom{flex-direction:column;gap:8px}
-  .cta{padding:30px;flex-direction:column;align-items:flex-start}
+  
+.nav-links {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+
+  padding: 18px 5%;
+  background: var(--cream);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12);
+
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s ease;
+}
+
+.nav-links.open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.menu-btn {
+  display: block;
+  position: relative;
+  z-index: 1002;
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 
